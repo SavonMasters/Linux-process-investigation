@@ -21,13 +21,12 @@ I inserted “cat /dev/urandom > dev/null” into the command line to make an ev
 On the system I find all processes information by using the “ps aux –sort=-%cpu | head” One stood out at the beginning for a few different errors; the command being ran is “cat /dev/urandom”, cat is not a typical process that is ran and /dev/urandom prompts the cryptographically secure pseudorandom number generator (CSPRNG) to generate ongoing amount of numbers to a system which would be effective for a DOS attack. Other than the command the CPU is very high for an individual process ”95.9%”.  With the other data I could see the process ID  “91112”.
 
 
-
-![image alt](https://github.com/SavonMasters/Linux-process-investigation/blob/fd32b8f6ebcde79435597f4a92779489e5b48fc0/Screenshot%20from%202026-05-16%2019-23-40.png)
+![image alt](https://github.com/SavonMasters/Linux-process-investigation/blob/097d8bb5cbfb181b80e26a6a94fd1f8408498645/Screenshot%20from%202026-05-16%2018-56-39.png)
 When I identify the process ID  I can build piece by piece the process's family tree. I used the “pstree 91112” to find the parent process, the “readlink -f /proc/91112/exe” to find the exe location on the system and the  “cat /proc/91112/cmdline”  to view the  process’s original command.
 
 
 
-
+![image alt](https://github.com/SavonMasters/Linux-process-investigation/blob/fd32b8f6ebcde79435597f4a92779489e5b48fc0/Screenshot%20from%202026-05-16%2019-23-40.png)
 To shield the system and restore it I set up the “kill -19 91112 and kill -9 91112” to suspend and kill the process. It needs to be determined if the process was destroyed, I ran the same command from before and there was no copy of the process. 
 
 
