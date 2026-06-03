@@ -6,7 +6,7 @@ Date: May 16th 2026
 Analyst: Savon Masters
 
 
-					                                        Summary 
+					                                 Summary 
 
 Processes are ran countless times on a system, to catch ones that are impactful you have to see the difference between dangerous and safe items. I simulated an attack in the way of a process, I investigated it to find the root, and replied with action to the attack.	
 		
@@ -30,12 +30,12 @@ When I identify the process ID  I can build piece by piece the process's family 
 To shield the system and restore it I set up the “kill -19 91112 and kill -9 91112” to suspend and kill the process. It needs to be determined if the process was destroyed, I ran the same command from before and there was no copy of the process. 
 
 
-					                                        Conclusion 
+													Conclusion 
 
 To end, an attack with a process took place, it’s makeup was high CPU usage and making the host extend itself for connectivity. I pulled back the process’s user creation, ID, location, commandline, and parent process and enforced safety response of the kill and suspension on the process. 
 
 
-						                                        IOCS
+						                                 IOCS
 
 * The process “cat /dev/urandom > /dev/null”  being ran, 
 * The use of cat in the command line of the process.
@@ -43,15 +43,15 @@ To end, an attack with a process took place, it’s makeup was high CPU usage an
 
 				                                        Recommendations 
 
-Develop an endpoint detection alert to go over all processes CPU usage goes beyond 80%.
-Keep monitoring processes commands it will show attacks placed on system.
-It only needs to be short amount of elevated accounts with executions powers to avoid malicious behavior.
+* Develop an endpoint detection alert to go over all processes CPU usage goes beyond 80%.
+* Keep monitoring processes commands it will show attacks placed on system.
+* It only needs to be short amount of elevated accounts with executions powers to avoid malicious behavior.
 
 
 					
                                                 Things I learned 
 
-Have caution with processes with increased CPU usage to watch for different processes.
-A processes overview through connected commands.
-A better paced way to respond to an incident without regrowing another one.
-A process being at the top of the chain for an attacker to cause damage to a system. 
+* Have caution with processes with increased CPU usage to watch for different processes.
+* A processes overview through connected commands.
+* A better paced way to respond to an incident without regrowing another one.
+* A process being at the top of the chain for an attacker to cause damage to a system. 
