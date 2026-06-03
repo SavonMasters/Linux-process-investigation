@@ -16,7 +16,7 @@ Processes are ran countless times on a system, to catch ones that are impactful 
 I inserted “cat /dev/urandom > dev/null” into the command line to make an event with high CPU usage.
 
 
-
+![image alt](https://github.com/SavonMasters/Linux-process-investigation/blob/be0259d852b0d974ed0e1df49ccfc6456ca8b8d6/Screenshot%20from%202026-05-16%2017-56-36.png)
 On the system I find all processes information by using the “ps aux –sort=-%cpu | head” One stood out at the beginning for a few different errors; the command being ran is “cat /dev/urandom”, cat is not a typical process that is ran and /dev/urandom prompts the cryptographically secure pseudorandom number generator (CSPRNG) to generate ongoing amount of numbers to a system which would be effective for a DOS attack. Other than the command the CPU is very high for an individual process ”95.9%”.  With the other data I could see the process ID  “91112”.
 
 
