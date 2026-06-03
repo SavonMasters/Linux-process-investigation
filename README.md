@@ -12,7 +12,7 @@ Processes are ran countless times on a system, to catch ones that are impactful 
 		
                                                 Investigation 
 
-
+![image alt](https://github.com/SavonMasters/Linux-process-investigation/blob/cf0ae3c96385c371a37fcb4de5fb4814ddc770bc/Screenshot%20from%202026-05-16%2017-45-58.png)
 I inserted “cat /dev/urandom > dev/null” into the command line to make an event with high CPU usage.
 
 
