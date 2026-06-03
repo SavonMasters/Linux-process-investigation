@@ -22,7 +22,7 @@ On the system I find all processes information by using the “ps aux –sort=-%
 
 
 
-
+![image alt](https://github.com/SavonMasters/Linux-process-investigation/blob/fd32b8f6ebcde79435597f4a92779489e5b48fc0/Screenshot%20from%202026-05-16%2019-23-40.png)
 When I identify the process ID  I can build piece by piece the process's family tree. I used the “pstree 91112” to find the parent process, the “readlink -f /proc/91112/exe” to find the exe location on the system and the  “cat /proc/91112/cmdline”  to view the  process’s original command.
 
 
