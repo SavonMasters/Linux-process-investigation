@@ -27,6 +27,7 @@ When I identify the process ID  I can build piece by piece the process's family 
 
 
 ![image alt](https://github.com/SavonMasters/Linux-process-investigation/blob/fd32b8f6ebcde79435597f4a92779489e5b48fc0/Screenshot%20from%202026-05-16%2019-23-40.png)
+![image alt](https://github.com/SavonMasters/Linux-process-investigation/blob/e6d20211b37ae785466ebcf97cf9a574b2b61fb8/Screenshot%20from%202026-05-16%2019-24-39.png)
 To shield the system and restore it I set up the “kill -19 91112 and kill -9 91112” to suspend and kill the process. It needs to be determined if the process was destroyed, I ran the same command from before and there was no copy of the process. 
 
 
